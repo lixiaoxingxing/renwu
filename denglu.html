@@ -20,41 +20,42 @@
             <div class="shang">
                 <img src="/assets/images/login_title.png" alt="">
             </div>
-            <form class="layui-form" action="">
+            <form class="layui-form layui-form2" id="dl" action="">
                 <div class="layui-form-item">
-                    <input type="text" name="title" required lay-verify="required" placeholder="请输入用户名"
+                    <input type="text" name="username" required lay-verify="required" placeholder="请输入用户名"
                         autocomplete="off" class="layui-input">
                 </div>
                 <div class="layui-form-item">
-                    <input type="password" name="title" required lay-verify="required" placeholder="请输入密码"
+                    <input type="password" name="password" required lay-verify="required" placeholder="请输入密码"
                         autocomplete="off" class="layui-input">
                 </div>
                 <div class="layui-form-item ">
-                    <button class="layui-btn layui-bg-blue layui-btn-fluid" lay-submit lay-filter="formDemo">登录</button>
+                    <button class="layui-btn layui-bg-blue layui-btn-fluid" lay-submit lay-filter="formDemo"
+                        id="form-dl">登录</button>
                 </div>
             </form>
-            <form class="layui-form1" action="" style="display: none;">
+            <form class="layui-form layui-form1 " id="fzc" action="" style="display: none;">
                 <div class="layui-form-item">
-                    <input type="text" name="title" required lay-verify="required" placeholder="请输入用户名"
+                    <input type="text" name="username" required lay-verify="required" placeholder="请输入用户名"
                         autocomplete="off" class="layui-input">
                 </div>
                 <div class="layui-form-item">
-                    <input type="password" name="title" required lay-verify="required" placeholder="请输入密码"
-                        autocomplete="off" class="layui-input">
+                    <input type="password" name="password" required lay-verify="required|pass" placeholder="请输入密码"
+                        autocomplete="off" class="layui-input one">
                 </div>
                 <div class="layui-form-item">
-                    <input type="password" name="title" required lay-verify="required" placeholder="请确认密码"
-                        autocomplete="off" class="layui-input">
+                    <input type="password" name="password" required lay-verify="required|pass|yanzheng"
+                        placeholder="请确认密码" autocomplete="off" class="layui-input">
                 </div>
                 <div class="layui-form-item ">
                     <button class="layui-btn layui-bg-blue layui-btn-fluid" lay-submit lay-filter="formDemo">注册</button>
                 </div>
-
             </form>
             <p class="btn1">去注册账号</p>
             <p class="btn2" style="display: none;">去登录账号</p>
         </div>
     </div>
+    <script src="/assets/lib/layui/layui.all.js"></script>
     <script src="/assets/lib/jquery.js"></script>
     <script src="/assets/js/denglu.js"></script>
 </body>
