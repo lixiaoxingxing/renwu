@@ -23,29 +23,22 @@ $(function () {
         }
     })
 
-    $('#fzc').on('submit', function (e) {
-        e.preventDefault()
-        // 2. 发起Ajax请求
+    $('#fzca').on('submit', function (e) {
+        e.preventDefault();
         $.ajax({
-            // 指定请求的方式
             type: 'POST',
-            // 指定请求的 URL 地址
-            // 注意：必须是 【请求根路径】 拼接上 【具体的 URL 地址】
             url: 'http://www.liulongbin.top:3007/api/reguser',
-            // 指定请求的数据
             data: $(this).serialize(),
-            // 指定成功的回调函数
             success: function (res) {
                 if (res.status !== 0) {
-                    // 注册失败
-                    return layer.msg(res.message)
+                    return layer.msg(res.message);
                 }
-                // 如果没有被 return 出去，证明注册成功
                 layer.msg('注册成功，请登录！')
-                // console.log(res)
+                console.log(res)
             }
         })
     })
+
 
     $('#dl').on('submit', function (e) {
         e.preventDefault();
