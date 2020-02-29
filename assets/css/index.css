@@ -1,0 +1,32 @@
+.iconfont,
+.layui-icon{
+    margin-right: 8px;
+}
+iframe{
+    width: 100%;
+    height: 100%;
+}
+.layui-body{
+    overflow: hidden;
+}
+.userinfo{
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+.userinfo img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.teyiqi{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #009688;
+    line-height: 40px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 25px;
+    border-radius: 50%;
+}

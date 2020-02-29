@@ -27,14 +27,14 @@ $(function () {
         e.preventDefault();
         $.ajax({
             type: 'POST',
-            url: 'http://www.liulongbin.top:3007/api/reguser',
+            url: '/api/reguser',
             data: $(this).serialize(),
             success: function (res) {
                 if (res.status !== 0) {
                     return layer.msg(res.message);
                 }
                 layer.msg('注册成功，请登录！')
-                console.log(res)
+                $('#link-login').click()
             }
         })
     })
@@ -44,13 +44,14 @@ $(function () {
         e.preventDefault();
         $.ajax({
             type: 'post',
-            url: 'http://www.liulongbin.top:3007/api/login',
+            url: '/api/login',
             data: $(this).serialize(),
             success: function (res) {
+                console.log(res);
                 if (res.status !== 0) {
                     return layer.msg(res.message);
                 }
-                layer.msg('登录成功！')
+                layer.msg('登录成功!')
                 localStorage.setItem('token', res.token)
                 // 跳转到后台首页
                 location.href = '/index.html'
