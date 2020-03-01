@@ -33,7 +33,7 @@
                     <tr>
                         <td>贤心</td>
                         <td>2016-11-29</td>
-                        <td> <button type="button" class="layui-btn layui-btn-xs">编辑</button>
+                        <td> <button type="button" class="layui-btn layui-btn-xs btnEdit">编辑</button>
                             <button type="button" class="layui-btn layui-btn-danger layui-btn-xs">删除</button>
                         </td>
                     </tr>
@@ -41,17 +41,19 @@
             </table>
         </div>
     </div>
+    <!-- 文本添加 -->
     <script type="text/html" id="trmplate">
         {{each data}}
         <tr>
             <td>{{$value.name}}</td>
             <td>{{$value.alias}}</td>
-            <td> <button type="button" class="layui-btn layui-btn-xs">编辑</button>
+            <td> <button type="button" class="layui-btn layui-btn-xs btnEdit">编辑</button>
                 <button type="button" class="layui-btn layui-btn-danger layui-btn-xs">删除</button>
             </td>
         </tr>
         {{/each}}
     </script>
+    <!-- 添加按钮中的数据 -->
     <script type="text/html" id="tpl-add">
         <form class="layui-form" id="form-add">
             <!-- 第一行 -->
@@ -76,6 +78,23 @@
               </div>
             </div>
           </form>
+    </script>
+    <!-- 修改按钮中的数据 -->
+    <script type="text/html" id="tpl-xg">
+        <form class="layui-form" action="">
+            <div class="layui-form-item">
+              <label class="layui-form-label">输入框</label>
+              <div class="layui-input-block">
+                <input type="text" name="title" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <label class="layui-form-label">密码框</label>
+              <div class="layui-input-inline">
+                <input type="password" name="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+              </div>
+            </div>
+        </form>
     </script>
     <script src="/assets/lib/layui/layui.all.js"></script>
     <script src="/assets/lib/jquery.js"></script>

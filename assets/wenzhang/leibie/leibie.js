@@ -30,6 +30,16 @@ $(function () {
         })
     })
 
+    $('body').on('click', '.btnEdit', function () {
+        layer.open({
+            title: '修改文章分类',
+            area: ['500px', '250px'],
+            type: 1,
+            content: $('#tpl-xg').html()
+        });
+    })
+
+
     function fn() {
         $.get('/my/article/cates', function (res) {
             if (res.status === 0) {
