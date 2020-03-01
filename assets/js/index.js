@@ -2,6 +2,19 @@
 $(function () {
     //调用函数,获取用户信息
     xinxi();
+    var layer = layui.layer;
+    $('.jieshu').on('click', function () {
+        //显示提示框
+        layer.confirm('确定退出?', {
+            btn: ['确认', '取消']
+        }, function (index, ele) {
+            //清除存储验证
+            localStorage.removeItem('token');
+            location.href = '/denglu.html';
+            layer.close(index);
+        })
+
+    })
 })
 
 
@@ -37,16 +50,3 @@ function touxiang(tx) {
         $('.teyiqi').html(one).show();
     }
 }
-var layer = layui.layer;
-$('.jieshu').on('click', function () {
-    //显示提示框
-    layer.confirm('确定退出?', {
-        btn: ['确认', '取消']
-    }, function (index, ele) {
-        //清除存储验证
-        localStorage.removeItem('token');
-        location.href = '/denglu.html';
-        layer.close(index);
-    })
-
-})

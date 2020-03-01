@@ -7,7 +7,7 @@ $.ajaxPrefilter(function (opction) {
             Authorization: localStorage.getItem('token')
         }
         opction.complete = function (re) {
-            if (re.responseJSON.status === 1 || re.responseJSON.message === '身份认证失败！') {
+            if (re.responseJSON.status === 1 && re.responseJSON.message === '身份认证失败！') {
                 location.href = '/denglu.html';
             }
         }
