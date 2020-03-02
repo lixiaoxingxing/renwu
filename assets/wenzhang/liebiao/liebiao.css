@@ -1,0 +1,24 @@
+html,body{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color:  #f2f3f5;
+    padding: 15px;
+}
+select{
+    width: 190px;
+    height: 38px;
+    
+}
+
+#form-search{
+    margin-top: 10px;
+    margin-left: 15px;
+}
+.layui-laypage{
+    margin-left: 15px;
+}
+.layui-laypage select{
+    width: 68px;
+}
